@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="../css/Settings.css">
+
+  <!-- FontAwesome 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar top -->
+  <div class="navbar-top">
+    <div class="title">
+      <h1>Settings</h1>
+    </div>
+  </div>
+  <!-- End -->
+
+  <!-- Sidenav -->
+  <div class="sidenav">
+
+    <div class="sidenav-url">
+      <div class="url">
+        <a href="#Update profile" class="active">Profile</a>
+        <hr align="center">
+      </div>
+      <div class="url">
+        <a href="#settings" onClick="hideUserProfileAndShowAddDevices()">Settings</a>
+        <hr align="center">
+      </div>
+    </div>
+  </div>
+  <!-- End -->
+
+  <!-- Main -->
+  <div id="userProfile" class="main">
+    <div class="card">
+      <div class="card-body">
+        <i class="fa fa-pen fa-xs edit"></i>
+        <table>
+          <tbody>
+            <tr>
+              <td>User Id</td>
+              <td>:</td>
+              <td><input type="text" placeholder="" id="userId" readonly required></td>
+            </tr>
+            <tr>
+              <td>First Name</td>
+              <td>:</td>
+              <td><input type="text" placeholder="" id="firstName" required></td>
+            </tr>
+            <tr>
+            <tr>
+              <td>Last Name</td>
+              <td>:</td>
+              <td><input type="text" placeholder="" id="lastName" required></td>
+            </tr>
+            <tr>
+              <td>Contact Number:</td>
+              <td>:</td>
+              <td><input type="text" placeholder="" id="contactNo" required></td>
+            </tr>
+            <tr>
+              <td>Emergency Contact:</td>
+              <td>:</td>
+              <td><input type="text" placeholder="" id="emergencyContactNo" required></td>
+            </tr>
+            <tr>
+              <td>Email Id</td>
+              <td>:</td>
+              <td><input type="email" placeholder="" id="email" size="30" readonly required></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>:</td>
+              <td><textarea id="address" rows="4" cols="20"></textarea></td>
+            </tr>
+            <tr>
+              <td><button onclick='saveUserProfile()'>Save</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="bluePrint" class="main">
+    <iframe src="https://dev-sdm-ui.s3.us-east-2.amazonaws.com/1.png"  height="300px" width="700px" frameBorder="0" allowtransparency="true" style="background: #FFFFFF;"  ></iframe>
+  </div>
+
+  </div>
+  <!-- End -->
+  <script>
+    function hideUserProfileAndShowAddDevices() {
+      var x = document.getElementById("userProfile");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+      var y = document.getElementById("addRemoveSensor");
+      if (y.style.display === "none") {
+        y.style.display = "block";
+      } else {
+        y.style.display = "none";
+      }
+    }
+  </script>
+  <script src="../js/Settings.js"></script>
+</body>
+
+</html>

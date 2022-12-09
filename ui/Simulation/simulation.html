@@ -1,0 +1,100 @@
+<!-- Latest compiled and minified CSS -->
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <style>
+    #controlpanel {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #controlpanel td,
+    #controlpanel th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #controlpanel tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #controlpanel tr:hover {
+      background-color: #ddd;
+    }
+
+    #controlpanel th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04aa6d;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Smart Disaster Management System</h1>
+      <p>Simulation System</p>
+    </div>
+    <table id="controlpanel">
+      <tr>
+        <td>
+          <button id="water_overflow_btn" class="btn btn-primary">
+            Water Overflow Alert
+          </button>
+        </td>
+        <td>
+          <button id="electric_shock_btn" class="btn btn-primary">
+            Electric Shock Alert
+          </button>
+        </td>
+        <td>
+          <button id="smoke_alert_btn" class="btn btn-primary">
+            Smoke Alert
+          </button>
+        </td>
+        <td>
+          <button id="fire_alert_btn" class="btn btn-primary">
+            Fire Alert
+          </button>
+        </td>
+        <td>
+          <button id="temperature_alert_btn" class="btn btn-primary">
+            Temperature Alert
+          </button>
+        </td>
+        <td>
+          <button id="reset_btn" class="btn btn-info">Reset</button>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="number" id="water_over_flow_input" /></td>
+        <td><input type="number" id="electric_shock_input" /></td>
+        <td><input type="number" id="smoke_alert_input" /></td>
+        <td><input type="number" id="fire_alert_input" /></td>
+        <td><input type="number" id="temperature_alert_input" /></td>
+      </tr>
+      <tr>
+        <td><img id="water_over_flow_img" src="water_over_flow.gif" /></td>
+        <td><img id="electric_shock_img" src="electric_shock.gif" /></td>
+        <td><img id="smoke_alert_img" src="smoke_alert.gif" /></td>
+        <td><img id="fire_alert_img" src="fire_alert.gif" /></td>
+        <td><img id="temperature_alert_img" src="temperature_alert.gif" /></td>
+      </tr>
+    </table>
+
+    <script src="../js/Simulation.js"></script>
+  </body>
+</html>

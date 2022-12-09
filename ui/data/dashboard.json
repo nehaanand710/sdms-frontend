@@ -1,0 +1,30 @@
+{
+  "user": {
+    "id": 1,
+    "firstName": "Victor",
+    "lastName": "Oyeniran",
+    "contactNo": "1234567890",
+    "emergencyNumber": "1234567890,1234567890",
+    "address": "Windsor",
+    "username": "manvir9824@gmail.com",
+    "password": "$2a$10$DVKbScs1oTQIu2ApeOJFWeTjbVB6mNE4wAtio1GDioEG6vE5OJd9W",
+    "role": "ROLE_USER"
+  },
+  "newEvent": [],
+  "eventHistoryList": [{
+    "eventId": 1,
+    "happenOn": "2022-11-26 00:00:28.0",
+    "actionMessage": "Call 911 as Fire Occurred at Bedroom 1 for Fire Sensor",
+    "sensorName": "Fire Sensor",
+    "sensorId": 1,
+    "actionTaken": "Clear",
+    "eventMessage": "Fire occurred for sensor Fire Sensor at Bedroom 1"
+  }],
+  "sensorList": [{
+    "userId": 1,
+    "sensorId": 1,
+    "sensorName": "Fire Sensor",
+    "sensorLocation": "Bedroom 1",
+    "sensorHealth": false
+  }]
+}

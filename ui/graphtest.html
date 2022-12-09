@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+<body>
+
+	<canvas id="myChart" style="max-width:150px;max-height:150px;"></canvas>
+
+	<script>
+		function loadCardGraph(canvasId, yValues) {
+			var xValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+			var barColors = ["red", "green", "blue", "orange", "brown", "red", "green", "blue", "orange", "brown"];
+			new Chart(canvasId, {
+				type: "bar",
+				data: {
+					labels: xValues,
+					datasets: [{
+						backgroundColor: barColors,
+						data: yValues
+					}]
+				},
+				options: {
+					plugins: {
+						title: {
+							display: true,
+							text: 'Custom Chart Title'
+						}
+					}
+				}
+			});
+		}
+		loadCardGraph("myChart", [55, 49, 44, 24, 15, 55, 49, 44, 24, 15]);
+	</script>
+
+</body>
+
+</html>

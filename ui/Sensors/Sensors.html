@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sensors</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/Sensors.css"></link>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-primary p-3">
+    <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+      <!-- <nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand" href="../dashboard.html">
+          <img src="../images/SDMSLogo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+          Dashboard
+        </a>
+      </nav> -->
+      <nav class="navbar navbar-light bg-primary">
+          <div class="container-fluid text-white">
+          <a class="navbar-brand" href="../Dashboard/dashboard.html">
+          <img src="../images/SDMSLogo.png" width="70" height="70" class="d-inline-block align-top" alt=""></a>
+          </div>
+      </nav>
+      <!-- <nav class="navbar navbar-light bg-primary">
+          <div class="container-fluid text-white">
+          <a class="navbar-brand" href="../Dashboard/dashboard.html">
+          <img src="../images/SDMSLogo.png" width="70" height="70" class="d-inline-block align-top" alt="">Sensors</a>
+          </div>
+      </nav> -->
+      <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+          Hello, User
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="../Settings/Settings.html">Settings</a></li>
+          <li><a class="dropdown-item" href="../ResetPassword/ResetPassword.html">Reset Password</a></li>
+          <li><a class="dropdown-item" href="../Sensors/Sensors.html">Sensors</a></li>
+          <li><a class="dropdown-item" onclick="SignOut()">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container row my-4">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2>Sensor Details</h2>
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+          </div>
+        </div>
+      </div>
+      <table class="table table-bordered" id="sensorTableId">
+        <thead>
+          <tr>
+            <th>Sensor Name</th>
+            <th>Sensor Location</th>
+            <th>Sensor Status</th>
+            <th>Sensor Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <script src="../js/Sensors.js"></script>
+</body>
+
+</html>

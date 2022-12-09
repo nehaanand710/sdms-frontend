@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/SignIn.css">
+</head>
+
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form method="post" id="register-form">
+
+    <div class="container">
+      <label for="registerEmailLabel"><b>Email Id:</b></label>
+      <input type="email" placeholder="Enter Email Id" id="registerEmailInputId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br /><br />
+
+      <label for="registerFirstNameLabel"><b>First Name:</b></label>
+      <input type="text" placeholder="Enter First Name" id="registerFirstNameInputId" required>
+
+      <label for="registerLastNameLabel"><b>Last Name:</b></label>
+      <input type="text" placeholder="Enter Last Name" id="registerLastNameInputId" required>
+
+      <label for="registerPasswordLabel"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" id="registerPasswordInputId" pattern=".{5,}" title="Eight or more characters" required>
+
+      <label for="registerContactNumberLabel"><b>Contact Number:</b></label>
+      <input type="tel" placeholder="Enter Contact Number" id="registerContactNumberInputId" pattern="[1-9]{1}[0-9]{9}" required>
+      <br /><br />
+
+      <label for="registerEmergencyNumberLabel"><b>Emergency Number:</b></label>
+      <input type="tel" placeholder="Enter Emergency Number" id="registerEmergencyNumberInputId" pattern="[1-9]{1}[0-9]{9}" required>
+      <br /><br />
+
+      <label for="registerAddressLabel"><b>Address:</b></label>
+      <textarea id="registerAddressInputId" placeholder="Enter Address" rows="4" cols="50"></textarea>
+      <br /><br />
+
+      <label for="bluePrint">Select a File for Blueprint:</label>
+      <input type="file" id="bluePrintInput" name="bluePrintInput">
+
+      <button type="submit">Register</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn" onClick="parent.location='../index.html'">Cancel</button>
+    </div>
+  </form>
+  <script src="../js/Register.js"></script>
+</body>
+
+</html>

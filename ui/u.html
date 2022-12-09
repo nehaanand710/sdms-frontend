@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var myHeaders = new Headers();
+      myHeaders.append(
+        "Authorization",
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzExNjMyMjAsInVzZXJfbmFtZSI6Im1hbnZpcjk4MjRAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjBlZjFhYjI1LTdkOTktNDJiMy05NDNkLTkzMTdjZWUwODhhMiIsImNsaWVudF9pZCI6ImxpdmUtdGVzdCIsInNjb3BlIjpbImFwcCJdfQ.dPBHDKMVhnjtWDh9d7Xm5l5Z8lOf4jIuF0R6v0TB-Y0"
+      );
+      myHeaders.append("Content-Type", "application/json");
+      //myHeaders.append("Accept", "application/json");
+    //   myHeaders.append("Access-Control-Allow-Origin", "http://localhost:5500");
+    //   myHeaders.append("Access-Control-Allow-Credentials", "true");
+      //myHeaders.append("GET", "POST", "OPTIONS");
+
+      var raw = JSON.stringify({
+        username: "manvir9824@gmail.com",
+      });
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+        //mode: "no-cors",
+      };
+      fetch("https://sdms2.tk/api/getDashboardData", requestOptions)
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+    </script>
+  </body>
+</html>

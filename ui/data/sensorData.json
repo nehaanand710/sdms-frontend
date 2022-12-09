@@ -1,0 +1,44 @@
+[
+    {
+        "userId": 1,
+        "sensorId": 1,
+        "sensorName": "Fire Alarm",
+        "sensorLocation": "Bedroom1",
+        "sensorHealth": "Healthy"
+    },
+    {
+        "userId": 1,
+        "sensorId": 4,
+        "sensorName": "Temperature",
+        "sensorLocation": "Bedroom1",
+        "sensorHealth": "Healthy"
+    },
+    {
+        "userId": 1,
+        "sensorId": 5,
+        "sensorName": "Smoke Detector",
+        "sensorLocation": "Bedroom1",
+        "sensorHealth": "Healthy"
+    },
+    {
+        "userId": 1,
+        "sensorId": 5,
+        "sensorName": "Electric Circuit Interrupter",
+        "sensorLocation": "Kitchen",
+        "sensorHealth": "Healthy"
+    },
+    {
+        "userId": 1,
+        "sensorId": 5,
+        "sensorName": "Water Overflow Detector",
+        "sensorLocation": "Bathroom1",
+        "sensorHealth": "Healthy"
+    },
+    {
+        "userId": 1,
+        "sensorId": 5,
+        "sensorName": "Security Alarm",
+        "sensorLocation": "Hall",
+        "sensorHealth": "Healthy"
+    }
+]

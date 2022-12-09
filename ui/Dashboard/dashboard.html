@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-primary p-3">
+    <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+      <nav class="navbar navbar-light bg-primary">
+          <div class="container-fluid text-white">
+          <a class="navbar-brand" href="dashboard.html">
+          <img src="../images/SDMSLogo.png" width="70" height="70" class="d-inline-block align-top" alt=""></a>
+          <span class="align-center">Dashboard</span>
+          </div>
+      </nav>
+
+      <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+          Hello, User
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="../Settings/Settings.html">Settings</a></li>
+          <li><a class="dropdown-item" href="../Sensors/Sensors.html">Sensors</a></li>
+          <li><a class="dropdown-item" href="../Simulation/simulation.html">Simulation</a></li>
+          <li><a class="dropdown-item" onclick="SignOut()">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="sensorListContainer row my-4" id="sensorListContainerId">
+  </div>
+  <div class="row">
+    <div class="col-12 col-xl-3">
+      <!-- Another widget will go here -->
+      <div class="card-body">
+        <iframe src="../Weather/weather.html" height="400px" frameBorder="0" allowtransparency="true" style="background: #FFFFFF;"></iframe>
+      </div>
+    </div>
+    <div class="col-12 col-xl-6">
+      <!-- Another widget will go here -->
+      <div class="card-body">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-xl-12 mb-4 mb-lg-0">
+      <div class="card">
+        <h5 class="card-header">Event History</h5>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table eventHistoryTable" id="dashboardActionTableId">
+              <thead>
+                <tr>
+                  <th scope="col">Sensor Name</th>
+                  <th scope="col">Sensor Event</th>
+                  <th scope="col">Date of Occurrence</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+
+</html>

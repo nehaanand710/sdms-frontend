@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'buildno', defaultValue: '', description: 'Enter the Build no to deploy')
+        string(name: 'env', defaultValue: 'dev', description: 'Enter the Environment dev or prod')
+    }
+
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+    }
+
+    stages {
+        stage('Downloading') {
+            steps {
+                echo 'Downloading the build artifact from S3'
+                script{
+                withAWS(credentials:'AWS', region:'us-east-2') {
+                        sh"""
+                        set -xe
+                        aws s3 cp s3://dev-sdm-ui/ui-builds/SDM_frontend-${buildno}.zip .
+                        ls
+                        """
+                    }
+                }
+            }
+        }
+        stage('Extracting') {
+            steps {
+                sh"""
+                mkdir build
+                unzip SDM_frontend-${buildno}.zip -d build
+                """
+            }
+        }
+        stage('Upload to S3') {
+            steps {
+                echo 'Uploading to S3...'
+                script{
+                    withAWS(credentials:'AWS', region:'us-east-2') {
+                        s3Upload(file:"build/ui/", bucket:'dev-sdm-ui',acl:'PublicRead')
+                        s3Upload(file:"build/manifest.json", bucket:'dev-sdm-ui',acl:'PublicRead')
+                        s3Upload(file:"build/sw.js", bucket:'dev-sdm-ui',acl:'PublicRead')
+                    }
+                    sh"""
+                    echo "Removing downloaded build to save space..."
+                    rm -rf build
+                    rm -rf SDM_frontend-${buildno}.zip
+                    """
+                }
+            }
+        }
+    }
+}

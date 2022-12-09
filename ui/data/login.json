@@ -1,0 +1,8 @@
+{
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc4NjIxNDMsInVzZXJfbmFtZSI6Im1hbnZpcjk4MjRAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6Ijk2Mzc4MWY2LWMxYjQtNGU1ZS1iOGFlLWI4Y2EzYjQ5YmIzZiIsImNsaWVudF9pZCI6ImxpdmUtdGVzdCIsInNjb3BlIjpbImFwcCJdfQ.7qhrNCocEkENss2GQ7RbSmtPMCTIwI96X1Tv-Rfa3R4",
+    "token_type": "bearer",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJtYW52aXI5ODI0QGdtYWlsLmNvbSIsInNjb3BlIjpbImFwcCJdLCJhdGkiOiI5NjM3ODFmNi1jMWI0LTRlNWUtYjhhZS1iOGNhM2I0OWJiM2YiLCJleHAiOjE2NzA0NDQwNjMsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJmYzQ2NWIwZS0wMmJmLTRjNGUtYmIyYy1jNGU0NWE3OWJmYjkiLCJjbGllbnRfaWQiOiJsaXZlLXRlc3QifQ.nLiUNCtTREeVMdT6P5K2AgqsEU3dSr03h76mpvMlNnU",
+    "expires_in": 10080,
+    "scope": "app",
+    "jti": "963781f6-c1b4-4e5e-b8ae-b8ca3b49bb3f"
+}
